@@ -14,6 +14,11 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports:[
+    HeaderComponent,
+    SidebarComponent,
+    FooterComponent
   ]
 })
 export class ComponentsModule { }
