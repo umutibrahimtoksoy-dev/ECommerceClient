@@ -14,7 +14,7 @@ const routes: Routes = [
     ]
   },
   { path:"", component: HomeComponent},
-  { path: "basket", loadChildren:() => import("./public/components/baskets/baskets.module").then(m => m.BasketsModule)},
+  { path: "baskets", loadChildren:() => import("./public/components/baskets/baskets.module").then(m => m.BasketsModule)},
   { path: "products", loadChildren:() => import("./public/components/products/products.module").then(m => m.ProductsModule)}
 ];
 
