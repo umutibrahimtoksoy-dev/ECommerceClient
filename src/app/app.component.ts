@@ -14,8 +14,8 @@ export class AppComponent implements AfterViewInit {
   menuHolder!: HTMLElement | null;
   siteBrand!: HTMLElement | null;
 
-  constructor(private elRef: ElementRef,  toastrService: CustomToastrService) {
- toastrService.message("Message","Hello World", {
+  constructor(private elRef: ElementRef, private toastrService: CustomToastrService) {
+ this.toastrService.message("Message","Hello World", {
       MessageType : ToastrMessageType.Success,
       Position: ToastrPosition.BottomRight
     });
