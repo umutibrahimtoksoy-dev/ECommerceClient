@@ -1,4 +1,5 @@
 import { Component, HostListener, ElementRef, AfterViewInit } from '@angular/core';
+import { CustomToastrService, ToastrMessageType, ToastrPosition } from './services/public/custom-toastr.service';
 
 declare var $:any
 
@@ -13,7 +14,12 @@ export class AppComponent implements AfterViewInit {
   menuHolder!: HTMLElement | null;
   siteBrand!: HTMLElement | null;
 
-  constructor(private elRef: ElementRef) {}
+  constructor(private elRef: ElementRef,  toastrService: CustomToastrService) {
+ toastrService.message("Message","Hello World", {
+      MessageType : ToastrMessageType.Success,
+      Position: ToastrPosition.BottomRight
+    });
+  }
 
   ngAfterViewInit() {
     this.menuHolder = this.elRef.nativeElement.querySelector('#menuHolder');

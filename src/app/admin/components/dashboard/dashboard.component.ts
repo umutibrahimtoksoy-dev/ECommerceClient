@@ -12,7 +12,6 @@ constructor(private alertify : AlertifyService){}
 
 ngOnInit(): void {
   }
-
   alertMessage()
   {
     this.alertify.message("Hello World", {
@@ -27,9 +26,4 @@ ngOnInit(): void {
   {
     this.alertify.dismiss();
   }
-
-
 }
-
-
-
