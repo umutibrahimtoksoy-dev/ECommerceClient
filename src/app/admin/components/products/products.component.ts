@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { BaseComponent } from 'src/app/base/base.component';
+import { BaseComponent, SpinnerType } from 'src/app/base/base.component';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { HttpClientService } from 'src/app/services/common/http-client.service';
+import { Product } from 'src/app/contracts/product';
 
 @Component({
   selector: 'app-products',
@@ -9,7 +11,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class ProductsComponent extends BaseComponent implements OnInit {
 
-constructor(spinner: NgxSpinnerService){
+constructor(spinner: NgxSpinnerService, private httpClientService: HttpClientService){
   super(spinner)
 }
 

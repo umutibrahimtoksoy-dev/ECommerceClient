@@ -5,7 +5,7 @@ export class BaseComponent {
   showSpinner(spinnerType : SpinnerType = SpinnerType.SquareJellyBox){
 this.spinner.show(spinnerType);
 
-setTimeout(() => this.hideSpinner(spinnerType),500)
+setTimeout(() => this.hideSpinner(spinnerType),200)
   }
 
   hideSpinner(spinnerType : SpinnerType){
